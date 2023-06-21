@@ -26,5 +26,5 @@ jobs:
           wget https://raw.githubusercontent.com/sigmaresearch100/r-ubuntu-22.04/main/tools/build.sh
           bash build.sh
       -
-        name: run
+        name: Build
         run: bash tools/build.sh
