@@ -20,5 +20,11 @@ jobs:
         name: Check out repository
         uses: actions/checkout@v3
       -
+        name: Install R
+        run: |
+          apt-get update && apt-get install -y wget
+          wget https://raw.githubusercontent.com/sigmaresearch100/r-ubuntu-22.04/main/tools/build.sh
+          bash build.sh
+      -
         name: run
         run: bash tools/build.sh
