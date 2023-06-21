@@ -23,9 +23,9 @@ apt-get install -y     \
 Rscript -e "                                                                                   \
     install.packages(                                                                          \
         c(                                                                                     \
-            "languageserver",                                                                  \
-            "httpgd"                                                                           \
+            'languageserver',                                                                  \
+            'httpgd'                                                                           \
         ),                                                                                     \
-        repos = c(REPO_NAME = "https://packagemanager.rstudio.com/all/__linux__/jammy/latest") \
+        repos = c(REPO_NAME = 'https://packagemanager.rstudio.com/all/__linux__/jammy/latest') \
     )                                                                                          \
 "
