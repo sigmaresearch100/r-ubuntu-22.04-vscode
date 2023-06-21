@@ -1,0 +1,24 @@
+name: Build R for Ubuntu-22.04 (Runner)
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu:22.04
+    env:
+      UBUNTU_VERSION: jammy
+
+    steps:
+      -
+        name: Check out repository
+        uses: actions/checkout@v3
+      -
+        name: run
+        run: sudo bash tools/build.sh
