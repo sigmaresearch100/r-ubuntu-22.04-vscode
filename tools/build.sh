@@ -11,7 +11,8 @@ apt-get install -y             \
 wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /usr/share/keyrings/vscode.gpg
 echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | tee /etc/apt/sources.list.d/vscode.list
 apt-get update
-apt-get install -y code
+apt-get install -y \
+    code
 
 # xml2 and systemfonts dependencies
 apt-get install -y     \
